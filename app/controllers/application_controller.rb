@@ -3,7 +3,12 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   
-  def (resource, *args)
-    params.require(resource).permit(*args)
+  def song_params(*args)
+    params.require(:song).permit(*args)
   end
+  
+  def artist_params(*args)
+    params.require(:artist).permit(*args)
+  end
+    
 end
