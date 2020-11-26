@@ -1,13 +1,13 @@
-class ArtistsController < ApplicationController
+class SongsController < ApplicationController
 
   private
   
-    def artist_finder
-      @artist = Artist.find(params[:id])
+    def song_finder
+      @song = Song.find(params[:id])
     end
   
-    def artist_params(*args)
-      params.require(:artist).permit(*args)
+    def song_params(*args)
+      params.require(:song).permit(*args)
     end
 
 end
