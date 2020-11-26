@@ -24,7 +24,7 @@ class GenresController < ApplicationController
   
   def update
     genre_finder
-    @genre.update(genre_params
+    @genre.update(genre_params)
   end
   
   private
