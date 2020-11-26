@@ -4,5 +4,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   
   def finder(resource, *args)
-    
+    params.require(resource).permit(*args)
+  end
 end
