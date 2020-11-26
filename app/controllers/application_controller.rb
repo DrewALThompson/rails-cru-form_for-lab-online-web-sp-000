@@ -10,5 +10,11 @@ class ApplicationController < ActionController::Base
   def artist_params(*args)
     params.require(:artist).permit(*args)
   end
+  
+  def genre_params(*args)
+    params.require(:genre).permit(*args)
+  end
+  
+  
     
 end
